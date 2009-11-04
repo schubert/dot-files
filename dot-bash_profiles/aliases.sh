@@ -17,5 +17,3 @@ alias pull='git pull'
 alias push='git push'
 alias rc='rake commit'
 alias mergemaster='git merge --no-commit --summary origin master'
-
-source ~/.local_aliases

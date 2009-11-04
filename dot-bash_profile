@@ -19,12 +19,12 @@ have()
 . ~/.bash_profiles/git.sh
 . ~/.bash_profiles/vendor.sh
 . ~/.bash_profiles/Generic.sh
+. ~/.bash_profiles/aliases.sh
 
 if [ -e ~/.bash_profiles/${HOST_OS}.sh ]; then
   source ~/.bash_profiles/${HOST_OS}.sh
 fi
 
-# Include local aliases
 if [ -f ~/.aliases ]; then
 	source ~/.aliases
 fi
