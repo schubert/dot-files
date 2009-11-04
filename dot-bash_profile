@@ -9,7 +9,6 @@ HOST_OS=`uname -s`
 . ~/.bash_profiles/colors.sh
 . ~/.bash_profiles/git.sh
 . ~/.bash_profiles/vendor.sh
-. ~/.bash_profiles/completion.sh
 . ~/.bash_profiles/Generic.sh
 
 if [ -e ~/.bash_profiles/${HOST_OS}.sh ]; then
