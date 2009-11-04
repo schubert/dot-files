@@ -6,4 +6,3 @@ BASE=~/.bash_profiles/vendor
 . ${BASE}/ruby-bash-completion/gem.sh
 . ${BASE}/ruby-bash-completion/rake.sh
 . ${BASE}/git/git-completion.bash
-

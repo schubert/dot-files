@@ -3,6 +3,11 @@ if [ `id -u` == 0 ]; then
 fi
 HOST_OS=`uname -s`
 
+
+if [ -f /opt/local/etc/bash_completion ]; then
+    . /opt/local/etc/bash_completion
+fi
+
 . ~/.bash_profiles/path.sh
 . ~/.bash_profiles/colors.sh
 . ~/.bash_profiles/git.sh
@@ -17,6 +22,7 @@ fi
 if [ -f ~/.aliases ]; then
 	source ~/.aliases
 fi
+
 
 export PS1 PATH TERM DISPLAY EDITOR VISUAL
 export TZ=UTC
