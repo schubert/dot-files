@@ -3,10 +3,16 @@ if [ `id -u` == 0 ]; then
 fi
 HOST_OS=`uname -s`
 
-
 if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
 fi
+
+have()
+{
+    unset -v have
+    PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin type $1 &>/dev/null &&
+    have="yes"
+}
 
 . ~/.bash_profiles/path.sh
 . ~/.bash_profiles/colors.sh
