@@ -1,3 +1,6 @@
 [submodule "vendor/z"]
 	path = dot-bash_profiles/vendor/z
 	url = git://github.com/rupa/z.git
+[submodule "dot-bash_profiles/vendor/ruby-bash-completion"]
+	path = dot-bash_profiles/vendor/ruby-bash-completion
+	url = git://github.com/oggy/ruby-bash-completion.git

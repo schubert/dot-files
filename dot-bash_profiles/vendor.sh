@@ -1,4 +1,7 @@
 touch ~/.z
 touch ~/.z.tmp
-. ~/.bash_profiles/vendor/z/z.sh
-. ~/.bash_profiles/vendor/dropbox/dropbox.sh
+BASE=~/.bash_profiles/vendor
+. ${BASE}/z/z.sh
+. ${BASE}/dropbox/dropbox.sh
+. ${BASE}/ruby-bash-completion/gem
+. ${BASE}/ruby-bash-completion/rake

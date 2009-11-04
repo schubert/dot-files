@@ -10,7 +10,6 @@ for dotfile in $(find dot-* ! -type d -depth 0); do
 done
 
 for dotdir in $(find dot-* -type d -depth 0); do
-  echo $dotdir
   rm -rf ${DESTINATION}/`echo ${dotdir} | sed -e 's@dot-@\.@'`
   mkdir -p ${DESTINATION}/`echo ${dotdir} | sed -e 's@dot-@\.@'`
   cp -rf $dotdir/* ${DESTINATION}/`echo ${dotdir} | sed -e 's@dot-@\.@'`/
