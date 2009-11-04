@@ -5,6 +5,8 @@ DESTINATION=~/Dropbox/HOME
 mkdir -p ${DESTINATION}
 rm -rf ${DESTINATION}/.bash_profiles/*
 
+git submodule update --init
+
 for dotfile in $(find dot-* ! -type d -depth 0); do
   cp -f $dotfile ~/Dropbox/Home/`echo ${dotfile} | sed -e 's@dot-@\.@'`
 done
