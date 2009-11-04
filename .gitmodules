@@ -1,3 +1,3 @@
 [submodule "vendor/z"]
-	path = vendor/z
+	path = dot-bash_profiles/vendor/z
 	url = git://github.com/rupa/z.git
