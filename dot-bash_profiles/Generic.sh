@@ -25,11 +25,3 @@ else
 	fi
 fi
 
-alias reload='source ~/.aliases && source ~/.bash_profile'
-alias   du='du -k'
-alias stab='strip -x'
-alias    e='exit'
-alias   su='sudo'
-alias  psa='ps auxw'
-alias fuck='fortune -o'
-alias   pc='ps auxw | grep $USER | wc -l'
