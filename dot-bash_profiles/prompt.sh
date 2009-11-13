@@ -1,0 +1,23 @@
+PREFIX=""
+BASE=$BLUE
+LB="["
+RB="]"
+AT="@"
+USER_AT_HOST="$BASE$LB$WHITE\u$BASE$AT$WHITE\h$BASE"
+SUFFIX="$BASE$RB$WHITE\$ "
+
+if ($GUI_TERM); then
+	PREFIX="\[\e]0;\u@\h\a"
+fi
+
+if ($IS_ROOT); then
+	echo "hello"
+	BASE=$RED
+fi
+
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+
+PS1=$PREFIX$USER_AT_HOST$(__git_ps1 %s)$SUFFIX
+export PS1

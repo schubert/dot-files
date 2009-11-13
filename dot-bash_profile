@@ -1,7 +1,10 @@
+IS_ROOT=false
 if [ `id -u` == 0 ]; then
 	umask 022
+	IS_ROOT=true
 fi
 HOST_OS=`uname -s`
+GUI_TERM=false
 
 if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
@@ -16,14 +19,16 @@ have()
 
 . ~/.bash_profiles/path.sh
 . ~/.bash_profiles/colors.sh
-. ~/.bash_profiles/git.sh
 . ~/.bash_profiles/vendor.sh
+. ~/.bash_profiles/git.sh
 . ~/.bash_profiles/Generic.sh
 . ~/.bash_profiles/aliases.sh
 
 if [ -e ~/.bash_profiles/${HOST_OS}.sh ]; then
   source ~/.bash_profiles/${HOST_OS}.sh
 fi
+
+. ~/.bash_profiles/prompt.sh
 
 if [ -f ~/.aliases ]; then
 	source ~/.aliases
