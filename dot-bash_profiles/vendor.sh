@@ -1,5 +1,7 @@
-touch ~/.z
-touch ~/.z.tmp
+if [ !$IS_ROOT ]; then
+  touch ~/.z
+  touch ~/.z.tmp
+fi
 BASE=~/.bash_profiles/vendor
 . ${BASE}/z/z.sh
 . ${BASE}/dropbox/dropbox.sh
