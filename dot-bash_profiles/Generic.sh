@@ -1,7 +1,7 @@
 TERM=vt220
 
 if [ ! -z "$DISPLAY" ]; then
-	if [ `id -u` == 0 ]; then
+	if [ $IS_ROOT ]; then
 		PS1="\[\e]0;[\u@\h]\a$RED[$WHITE\u$RED@$WHITE\h$RED]$WHITE "
 	else	
 		PS1="\[\e]0;[\u@\h]\a$BLUE[$WHITE\u$BLUE@$WHITE\h$BLUE]$WHITE "
@@ -18,7 +18,7 @@ else
 			DISPLAY=`echo $SSH_CLIENT | cut -f 1 -d \ `:0
 		fi
 	fi
-	if [ `id -u` == 0 ]; then
+	if [ $IS_ROOT ]; then
 		PS1="$RED[$WHITE\u$RED@$WHITE\h$RED]$WHITE "
 	else
 		PS1="$BLUE[$WHITE\u$BLUE@$WHITE\h$BLUE]$WHITE "

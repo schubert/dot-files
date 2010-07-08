@@ -8,7 +8,7 @@ else
   TERM=wsvt25
 fi
 
-if [ `id -u` != 0 ]; then
+if [ !$IS_ROOT ]; then
 	if [ X"`quota -q`" != X"" ]; then  
 		echo -n 'Disk Quota Warning: ';echo `quota -q | grep -v uid`
 	fi
